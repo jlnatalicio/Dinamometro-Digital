@@ -5,7 +5,7 @@ Esse projeto consiste em um software para um Dinamômetro Digital, utilizando os
  - Extensômetro;
  - display LCD para interface homem-máquina; 
  
-O código fonte foi utilizado no meu trabalho de conclusão de curso no ano de 2019.
+O código fonte foi utilizado no meu trabalho de conclusão de curso de graduação.
 
 Objetivo: desenvolver um dinamômetro eletrônico digital que tenha uma interface mais amigável, que fosse mais fácil de ser utilizado.
 ------------------------------------------------------------------------------------------------------------------------------------------
@@ -16,7 +16,7 @@ This project consists of software for a Digital Dynamometer, using the following
  - Extensometer;
  - LCD display for man-machine interface;
  
-The source code was used in my course completion work in 2019.
+The source code was used in my graduation work.
 
 Objective: to develop a digital electronic dynamometer that has a friendlier interface, that would be easier to use.
 ------------------------------------------------------------------------------------------------------------------------------------------
