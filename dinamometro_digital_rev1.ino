@@ -2,12 +2,17 @@
  * Universidade São Judas Tadeu 
  * FTCE - Engenharia Eletrônica
  * Código desenvolvido como parte do Projeto de TCC 
- * Alunos:                                R.A.:
- *        Eliana Harume Rodrigues Tamari        201404433
- *        José Leonardo Natalício               817110728
- *        Rafael de Oliveira Silva              201312986
- * Turma: EET6AN-MCA
- ******************************************************************/      
+ * Autores:                              
+ *        Eliana Harume Rodrigues Tamari       
+ *        José Leonardo Natalício              
+ *        Rafael de Oliveira Silva             
+ ******************************************************************/  
+
+/* O Serial.print ao longo do código serve como forma acompanhar o código e como auxilio para futuras alterações
+ * Utilizamos o Serial.print também para mandar os valores armazenados na memória para uma planilha no excel 
+ * A Biblioteca EEPROM está desatualizada e não recomendamos o uso futuramente para a ESP32 (procurar pela lib "Preferences").
+ */
+
 // ========================================================================== //
 // ---------------------------- Variáveis Globais --------------------------- // 
 byte     idade = 18,                  // variável para delimitar valor mínimo de idade
@@ -72,10 +77,8 @@ const int rs = 23, en = 22, d4 = 5, d5 = 18, d6 = 19, d7 = 21;
 
 // ========================================================================== //
 // ------------------------ Protótipo das Funções --------------------------- //
-
 void menu_principal();                // função para entrar no menu principal
 void leitura_botoes();                // função para leitura dos botoes
-
 // ========================================================================== //
 
 // include the library code:
@@ -111,13 +114,9 @@ void setup() {
   Serial.begin (9600);
   EEPROM.begin(512);
 
-  lcd.setCursor(0,0);
-  lcd.print("   USJT 2019");
   lcd.setCursor(0,1);
-  lcd.print("   ***TCC***");
-  lcd.setCursor(0,2);
   lcd.print("  Dinamometro");
-  lcd.setCursor(0,3);
+  lcd.setCursor(0,2);
   lcd.print("    Digital");
 
 delay(5000);
@@ -2422,7 +2421,7 @@ while(loop0) {
 } // end void leitura_botoes()
 
 //algoritmo para arredondamento de valor float
-int arredondar( float valor ) {
+int arredondar(float valor) {
 
     int resultado, sobra;                                                     // variáveis usadas pela função
     
@@ -2455,8 +2454,3 @@ int arredondar( float valor ) {
       
       return resultado;                 // 5 - retornar ao codigo-fonte com o valor arredondado
 }// end int arredondar()
-
-/* O Serial.print ao longo do código serve como forma acompanhar o código e como auxilio para futuras alterações
- * Utilizamos o Serial.print também para mandar os valores armazenados na memória para uma planilha no excel 
- * A Biblioteca EEPROM está desatualizada e não recomendamos o uso futuramente (procurar pela lib "Preferences").
- */
